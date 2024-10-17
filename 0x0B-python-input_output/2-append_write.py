@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+"""The append text function container"""
 
 
-def read_lines(filename="", nb_lines=0):
-    with open(filename, "r", encoding="UTF-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-        for index in range(nb_lines):
-            print(f.readline(), end="")
+def append_write(filename="", text=""):
+    """appends a string and returns the number of characters added"""
+    with open(filename, "a", encoding="utf-8") as file:
+        lines = file.write(text)
+        return lines

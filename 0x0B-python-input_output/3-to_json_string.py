@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""The append text function container"""
 
 
-def write_file(filename="", text=""):
-    with open(filename, "w", encoding="UTF-8") as f:
-        return f.write(text)
+def append_write(filename="", text=""):
+    """appends a string and returns the number of characters added"""
+    with open(filename, "a", encoding="utf-8") as file:
+        lines = file.write(text)
+        return lines

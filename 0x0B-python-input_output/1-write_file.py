@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+"""The write_file function container"""
 
 
-def number_of_lines(filename=""):
-    with open(filename, "r", encoding="UTF-8") as f:
-        return len(list(f))
+def write_file(filename="", text=""):
+    """write_file writes a string to a text file.
+        Args:
+            filename (str): name of file.
+            text (str): text to be written.
+            Return: the number of characters written
+    """
+    with open(filename, "w", encoding="utf-8") as file:
+        files = file.write(text)
+        return (files)
